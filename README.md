@@ -1,6 +1,16 @@
 # tree-compression
 This project is part of the [2024 Research Project](https://github.com/TU-Delft-CSE/Research-Project) at [TU Delft](https://github.com/TU-Delft-CSE).
 
+# Abstract
+
+Trees are essential components of both real and digital environments. Therefore, it is important to have 3D models of trees that are of high quality and computationally efficient. One way to achieve this is by compressing a high-quality model using billboard rendering, which involves partitioning the tree into multiple planes to produce a similar result to the original.
+
+Our study explores the compression of 3D models using an optimization loop and adapting billboard rendering techniques. We use computer vision primitives to render basic models, which we then optimize by adjusting the texture to resemble the original tree. The models consist of multiple upright planes that are rotated around the central vertical axis of the original tree. We use different optimization functions, such as L1 and L2 losses, to determine the best approach.
+
+We can improve the initial models by bounding the billboards and limiting their heights and widths to that of the trees. Additionally, we can use double-sided textures for the billboards to allow more flexibility for optimizing different species of trees. However, optimizing multiple tree types performs differently for each species, leading to improvements that only benefit certain trees in specific scenarios.
+
+Using quantitative metrics, we determined which models perform best and how similar they are to the original after training. We found that our compressed models generally resemble the original while having only a fraction of the original size.
+
 # Installation
 
 Requires Python 3.9+, VS2019+, Cuda 11.3+ and PyTorch 1.10+
