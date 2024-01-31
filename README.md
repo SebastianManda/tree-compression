@@ -27,6 +27,15 @@ conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvi
 pip install git+https://github.com/NVlabs/nvdiffrast/
 pip install matplotlib image-similarity-measures pyfftw openpyxl ninja
 ```
+
+Alternatively you can use the `requirements.txt` file to install all packages at once:
+
+```
+conda create -n env python=3.9 
+conda activate env
+pip install -r requirements.txt
+```
+
 ## Every new command prompt
 
 ```
@@ -35,7 +44,7 @@ activate env
 
 # Example
 
-The normal dataset of quaking aspen can be run by the following comand: 
+The normal dataset of quaking aspen can be run by the following command: 
 
 ```
 python train.py
@@ -62,4 +71,4 @@ This work is made available under the Nvidia Source Code License.
 
 For business inquiries, please visit our website and submit the form: NVIDIA Research Licensing
 
-Models under `models\willow.obj`, `\models\quaking_aspen.obj` and `\models\acer.obj` are derived from the blender plugin https://github.com/friggog/tree-gen under GPL-3.0 License.
+Models used to create the ground_truths that this research was run on are derived from the blender plugin https://github.com/friggog/tree-gen under GPL-3.0 License. They are the Quaking Aspen, the Willow and the Acer.
